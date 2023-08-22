@@ -27,9 +27,13 @@ cd packer-linux-gcp
 ```
 3. Remove the "changeme" extension from the variables.auto.pkvars.hcl.changeme file
 ```
-mv variables.auto.pkvars.hcl.changeme variables.auto.pkvars.hcl
+mv  variables.auto.pkrvars.hcl.changeme  variables.auto.pkrvars.hcl
 ```
-4. Edit the variables.auto.pkvars.hcl file and customize for your environment.  NOTE:  Use the 'source_image_family info' area to find the appropriate source_image_family and ssh_username values.
+4. Edit the variables.auto.pkvars.hcl file and customize for your environment.  
+<br />NOTE:  Use the 'source_image_family info' area to find the appropriate source_image_family and ssh_username values.
+```
+code variables.auto.pkrvars.hcl
+```
 5. Initialize packer
 ```
 packer init
