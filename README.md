@@ -47,5 +47,6 @@ packer init .
 packer build .
 ```
 <br />
-The build will take a few minutes to complete.  To see your new image in the GCP [Console](https://console.cloud.google.com/), select your Project and search for "Images" (Compute Engine). 
+
+The build will take a few minutes to complete.  To see your new image in the [GCP Console](https://console.cloud.google.com/), select your Project and search for "Images" (Compute Engine). 
 You should see an image with a name pattern of "packer-<source_image_family>-s1-<timestamp>".  ie:  packer-rhel-9-s1-20230822224125 
