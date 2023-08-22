@@ -25,7 +25,7 @@ source "googlecompute" "gce_image" {
 
 build {
   sources = ["source.googlecompute.gce_image"]
-  
+
   # If using the ubuntu-2204-lts or ubuntu-minimal-2204-lts images, uncomment the 3 lines below to allow apt to refresh its cache before downloading the jq utility.
   # provisioner "shell" {
   #   inline = ["sudo apt-get update"]

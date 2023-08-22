@@ -1,24 +1,21 @@
 # SentinelOne variable values
-s1_mgmt_prefix    = ""      #ie: If your SentinelOne Management console is https://usea1-purple.sentinelone.net, use "usea1-purple".
-s1_api_token      = ""
-s1_site_token     = ""
-s1_version_status = "ga"
+s1_mgmt_prefix      = ""            # ie: If your SentinelOne Management console is https://usea1-purple.sentinelone.net, use "usea1-purple".
+s1_api_token        = ""            # Reference KB: https://support.sentinelone.com/hc/en-us/articles/9274954401687-Creating-Service-Users
+s1_site_token       = ""            # Reference KB: https://support.sentinelone.com/hc/en-us/articles/360019996013-Getting-a-Site-or-Group-Token
+s1_version_status   = "ga"          # Valid values are "ga" or "ea"
 
 # GCP variable values
-project_id          = "s1-demo"
-zone                = "us-east1-d"
+project_id          = "s1-demo"     # Change this to the GCP project_id you'll be working in.
+zone                = "us-east1-d"  # Change this to the GCP Zone you'll be working in.
 
 # GCE Image variable values
-source_image_family = "rhel-9 " # gcloud compute images list.  See source_image_family below.
-image_description   = "RHEL 9 image with SentinelOne agent"
-image_labels      = { environment = "test", team = "cws" }
-ssh_username        = "root"
-#image_name          = "packer-ubuntu-2004-s1"
+source_image_family = "rhel-9 "                                 # gcloud compute images list.  See "source_image_family info" below.
+image_description   = "RHEL 9 image with SentinelOne agent"     # A friendly description for your image.
+image_labels        = { environment = "test", team = "cws" }    # Just and example of applying labels to your image.
+ssh_username        = "root"                                    # This is the default username for the image we're building.  See "source_image_family info" below.
 
 
-
-
-################################ source_image_family ################################
+################################ source_image_family info ################################
 # source_image_family       ssh_username        notes
 #####################################################################################
 # ubuntu-2204-lts           root                # NOTE: fails to install 'jq' if an additional shell provisioner isn't added to run 'sudo apt-get update'

@@ -16,6 +16,22 @@ You will need access to Google Cloud with permissions to create Compute Engine I
 # Usage Instructions
 1. Clone this repo
 ```
-git clone 
+git clone https://github.com/s1-howie/packer-linux-gcp.git
 ```
-
+2. Change into the packer-linux-gcp directory
+```
+cd packer-linux-gcp
+```
+3. Remove the "changeme" extension from the variables.auto.pkvars.hcl.changeme file
+```
+mv variables.auto.pkvars.hcl.changeme variables.auto.pkvars.hcl
+```
+4. Edit the variables.auto.pkvars.hcl file and customize for your environment.  NOTE:  Use the 'source_image_family info' area to find the appropriate source_image_family and ssh_username values.
+5. Initialize packer
+```
+packer init
+```
+6. Perform a Packer build
+```
+packer build .
+```
