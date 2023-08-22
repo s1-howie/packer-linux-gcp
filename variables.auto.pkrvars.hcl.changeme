@@ -9,7 +9,7 @@ project_id          = "s1-demo"     # Change this to the GCP project_id you'll b
 zone                = "us-east1-d"  # Change this to the GCP Zone you'll be working in.
 
 # GCE Image variable values
-source_image_family = "rhel-9 "                                 # gcloud compute images list.  See "source_image_family info" below.
+source_image_family = "rhel-9"                                 # gcloud compute images list.  See "source_image_family info" below.
 image_description   = "RHEL 9 image with SentinelOne agent"     # A friendly description for your image.
 image_labels        = { environment = "test", team = "cws" }    # Just and example of applying labels to your image.
 ssh_username        = "root"                                    # This is the default username for the image we're building.  See "source_image_family info" below.

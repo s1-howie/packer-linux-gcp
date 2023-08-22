@@ -11,7 +11,7 @@ You will also need access to a SentinelOne Management console to obtain:
 - A [Service Account Token](https://support.sentinelone.com/hc/en-us/articles/9274954401687-Creating-Service-Users) in order to authenticate/download installer packages from the SentinelOne Management console.
 - A [Site Token](https://support.sentinelone.com/hc/en-us/articles/360019996013-Getting-a-Site-or-Group-Token) that will be assigned to your SentinelOne Linux agents.
 
-You will also need access to Google Cloud with permissions to create Compute Engine Instances and Images.  
+You will also need access to Google Cloud (via the [gcloud](https://cloud.google.com/sdk/docs/install) CLI) with permissions to create Compute Engine Instances and Images.  
 
 
 # Usage Instructions
@@ -34,11 +34,16 @@ mv  variables.auto.pkrvars.hcl.changeme  variables.auto.pkrvars.hcl
 ```
 code variables.auto.pkrvars.hcl
 ```
-5. Initialize packer
+5. Get temporary GCP credetials via gcloud
 ```
-packer init
+gcloud auth login
 ```
-6. Perform a Packer build
+
+6. Initialize packer
+```
+packer init .
+```
+7. Perform a Packer build
 ```
 packer build .
 ```
