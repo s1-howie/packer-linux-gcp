@@ -1,0 +1,48 @@
+# SentinelOne variable values
+s1_mgmt_prefix    = ""      #ie: If your SentinelOne Management console is https://usea1-purple.sentinelone.net, use "usea1-purple".
+s1_api_token      = ""
+s1_site_token     = ""
+s1_version_status = "ga"
+
+# GCP variable values
+project_id          = "s1-demo"
+zone                = "us-east1-d"
+
+# GCE Image variable values
+source_image_family = "rhel-9 " # gcloud compute images list.  See source_image_family below.
+image_description   = "RHEL 9 image with SentinelOne agent"
+image_labels      = { environment = "test", team = "cws" }
+ssh_username        = "root"
+#image_name          = "packer-ubuntu-2004-s1"
+
+
+
+
+################################ source_image_family ################################
+# source_image_family       ssh_username        notes
+#####################################################################################
+# ubuntu-2204-lts           root                # NOTE: fails to install 'jq' if an additional shell provisioner isn't added to run 'sudo apt-get update'
+# ubuntu-2004-lts           root
+# ubuntu-minimal-2204-lts   root                # NOTE: fails to install 'jq' if an additional shell provisioner isn't added to run 'sudo apt-get update'
+# ubuntu-minimal-2004-lts   root                
+
+# rocky-linux-9             rocky
+# rocky-linux-8             rocky
+
+# centos-7                  centos
+# centos-stream-8           centos              
+# centos-stream-9           centos              
+
+# debian-12                 debian
+# debian-11                 debian
+# debian-10                 debian
+
+# fedora-cloud-38           fedora
+# fedora-cloud-37           fedora
+
+# rhel-9                    rhel
+# rhel-8                    rhel
+# rhel-7                    rhel
+
+# sles-15                   suse
+# sles-12                   suse    
