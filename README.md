@@ -50,3 +50,5 @@ packer build .
 
 The build will take a few minutes to complete.  To see your new image in the [GCP Console](https://console.cloud.google.com/), select your Project and search for "Images" (Compute Engine). 
 You should see an image with a name pattern of "packer-<source_image_family>-s1-<timestamp>".  ie:  packer-rhel-9-s1-20230822224125 
+
+When you create new instances from this image, the Linux agent will automatically register to your SentinelOne Management console using the Site Token you used in the template.
