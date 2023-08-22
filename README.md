@@ -11,9 +11,12 @@ You will also need access to a SentinelOne Management console to obtain:
 - A [Service Account Token](https://support.sentinelone.com/hc/en-us/articles/9274954401687-Creating-Service-Users) in order to authenticate/download installer packages from the SentinelOne Management console.
 - A [Site Token](https://support.sentinelone.com/hc/en-us/articles/360019996013-Getting-a-Site-or-Group-Token) that will be assigned to your SentinelOne Linux agents.
 
-You will need access to Google Cloud with permissions to create Compute Engine Instances and Images.  
+You will also need access to Google Cloud with permissions to create Compute Engine Instances and Images.  
+
 
 # Usage Instructions
+NOTE:  These instructions have only been tested on Mac and Linux build hosts.
+
 1. Clone this repo
 ```
 git clone https://github.com/s1-howie/packer-linux-gcp.git
