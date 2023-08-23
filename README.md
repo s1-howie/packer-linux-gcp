@@ -32,7 +32,7 @@ mv  variables.auto.pkrvars.hcl.changeme  variables.auto.pkrvars.hcl
 4. Edit the variables.auto.pkvars.hcl file and customize for your environment.  
 <br />NOTE:  Use the 'source_image_family info' area to find the appropriate source_image_family and ssh_username values.
 ```
-code variables.auto.pkrvars.hcl
+vi variables.auto.pkrvars.hcl
 ```
 5. Get temporary GCP credetials via gcloud
 ```
